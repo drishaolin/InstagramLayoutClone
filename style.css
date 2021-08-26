@@ -275,4 +275,38 @@ body {
 
 }
 
+/* ================= RESPONSIVE ===================  */
+
+@media (max-width: 768px) {
+    .recomendations {
+        display: none;
+    }
+    .main-section {
+        display: block;
+        margin-top: 6.5rem;
+        width: 90%;
+    }
+    .nav-container {
+        display: grid;
+        grid-template-rows: 3rem 3rem;
+        grid-template-areas: 
+        'logo search'
+        'icons icons' ;
+        justify-content: space-around;
+        width: 100%;
+    }
+    /* .nav-items {
+        width: 90%;
+    } */
+    .brand-img{
+        grid-area: logo;
+    }
+    .search-bar {
+        grid-area: search;
+        width: 100%;
+    }
+    .nav-items {
+        grid-area: icons;
+    }
+}
 
