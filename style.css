@@ -84,14 +84,20 @@ body {
     height: 100%;
     border: 0.5px solid #dbdbdb;
     border-radius: 4px;
-    margin: 0 2rem;
 }
 
 /* ================= STATUS SECTION ===================  */
 
 .status-section {
     height: 7rem;
-    margin: 5rem 0 2rem;
+    margin: 5rem auto 2rem;
+    width: auto;
+    overflow: scroll;
+    
+}
+
+.status-section::-webkit-scrollbar{
+    display: none;
 }
 
 .status-card {
@@ -103,6 +109,7 @@ body {
     border: 2.5px solid #ed6249;
     border-radius: 100%;
     padding: 1.5px;
+    cursor: pointer;
 }
 
 .username {
@@ -112,9 +119,23 @@ body {
 
 /* ================= POST SECTION ===================  */
 
+.main-section {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-gap: 30px;
+    margin: auto;
+    width: 70%;
+
+}
+
+.posts-section{
+    width: auto;
+}
+
 .posts-section .container {
     flex-direction: column;
-    margin: 1rem 2rem ;
+    width: 100%;
+    height: auto;
 }
 
 .post-header {
@@ -122,10 +143,6 @@ body {
     align-items: center;
     width: 100%;
     padding: 8px;
-}
-
-.post-header .profile-pic {
-    height: 2.5rem;
 }
 
 .post-header .username {
@@ -177,4 +194,85 @@ body {
     font-variant: small-caps;
     color: #a7a9ac;
 }
+
+/* ================= RECOMENDATIONS ASIDE ===================  */
+
+.recomendations {
+    margin-top: 5rem;
+    width: 100%;
+    
+}
+
+.info {
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-areas: 
+    'user-pic user-name btn'
+    'user-pic sub-txt btn';
+    align-items: center;
+    
+    
+}
+
+.info .profile-pic {
+    border: none;
+    height: 3.5rem;
+    grid-area: user-pic;
+    justify-self: center;
+}
+.post-header .profile-pic, .suggestions .profile-pic {
+    height: 2.5rem;
+}
+
+.sub-text {
+    grid-area: sub-txt;
+    font-size: 0.9rem;
+    color: #a2a2a2;
+}
+.info .username {
+    grid-area: user-name;
+    font-size: 0.8rem;
+}
+
+.custom-btn {
+    height: 1.5rem;
+    background: none;
+    border: none;
+    font-size: 0.7rem;    
+    cursor: pointer;
+    grid-area: btn;
+}
+
+.change-user-btn {
+    color: #0095f6;
+    font-weight: 600;
+}
+
+.all-btn {
+    
+    font-weight: 600;
+    
+}
+
+.suggestions {
+    margin-top: 1.5rem;
+}
+.suggestions .info {
+    margin: 0.5rem 0;
+}
+
+.suggest-header {
+    display: flex;
+    align-items: center;
+    margin: 1.2rem;
+
+}
+.suggest-text {
+    color: #8e8e8e;
+    font-size: 0.8rem;
+    font-weight: 600;
+    flex-grow: 1;
+
+}
+
 
